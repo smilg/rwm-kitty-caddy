@@ -1,7 +1,8 @@
 # Kitty Caddy - Automatic Cat Feeder
 ## Jacob Smilg, Real World Microcontrollers FA '21 (ENGR3499B)
 
-(gif/video of my finished cat feeder)
+<img src="images/irl/menu_demo.gif" width="400">
+<img src="images/irl/rotate_demo.gif" width="400">
 
 This project was built for a class I took at Olin in the Fall 2021 semester called Real World Microcontrollers. It's an automatic cat feeder with three rotating food trays that automatically rotates to the next one at a set time each day. The body and mechanism were provided, and I had to design and program the controller PCB.
 
@@ -28,7 +29,7 @@ The requirements were to design and program a controller board for an automatic 
 ### Modules
 
 For this project, students are supposed to use individual modules for their components. Based on the required functionality, I knew I'd need each of the following:
-- I2C capable microcontroller with a decent amount of memory to act as the brain and drive the display
+- I<sup>2</sup>C capable microcontroller with a decent amount of memory to act as the brain and drive the display
 - Reliable RTC module
 - Stepper motor driver
 - Buck converter
