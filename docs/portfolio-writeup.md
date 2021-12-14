@@ -15,14 +15,14 @@ The requirements were to design and program a controller board for an automatic 
 
 <figure>
 <figcaption>The provided case for the project:</figcaption>
-<img src="docs/images/irl/final_case_on.jpg" width="400">
+<img src="images/irl/final_case_on.jpg" width="400">
 </figure>
 
 ## Electronics
 
 <figure>
 <figcaption>The front and back of my final assembled PCB:</figcaption>
-<img src="docs/images/irl/rev2_back_assembled.jpg" width="400"><img src="docs/images/irl/rev2_front_assembled.jpg" width="400">
+<img src="images/irl/rev2_back_assembled.jpg" width="400"><img src="images/irl/rev2_front_assembled.jpg" width="400">
 </figure>
 
 ### Modules
@@ -37,24 +37,24 @@ I decided to use an Arduino Nano Every, as they are inexpensive, decently powerf
 
 <figure>
 <figcaption>My final schematic:</figcaption>
-<img src="docs/images/schematic.png" width="700">
+<img src="images/schematic.png" width="700">
 </figure>
 
 ### PCB
 
 <figure>
 <figcaption>The front and back of my first PCB before assembly:</figcaption>
-<img src="docs/images/irl/rev1_front.jpg" width="400"><img src="docs/images/irl/rev1_back.jpg" width="400">
+<img src="images/irl/rev1_front.jpg" width="400"><img src="images/irl/rev1_back.jpg" width="400">
 </figure>
 
 <figure>
 <figcaption>The front and back of my final PCB before assembly:</figcaption>
-<img src="docs/images/irl/rev2_front.jpg" width="400"><img src="docs/images/irl/rev2_back.jpg" width="400">
+<img src="images/irl/rev2_front.jpg" width="400"><img src="images/irl/rev2_back.jpg" width="400">
 </figure>
 
 <figure>
 <figcaption>My final PCB layout:</figcaption>
-<img src="docs/images/pcb_layout.png" width="700">
+<img src="images/pcb_layout.png" width="700">
 </figure>
 
 Students are expected to create two revisions of their PCB for this project, so they can fix any mistakes from the first one. My first board ended up working just fine, but I still ordered a second version to tweak the silkscreen and pick a different solder mask color, since I didn't really like the white one. I also had the Vin and 5V out pins on the Arduino connected on the first revision, which I fixed in the second revision. This probably wouldn't have broken anything (I cut through the trace before testing the first revision just in case) since I was supplying 5V on Vin anyways, but better safe than sorry. 
