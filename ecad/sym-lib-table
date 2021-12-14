@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name @CatFeeder)(type Legacy)(uri ${KIPRJMOD}/@CatFeeder.lib)(options "")(descr ""))
+)

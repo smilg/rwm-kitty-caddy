@@ -1,0 +1,664 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Cat Feeder"
+Date "2021-09-21"
+Rev "1"
+Comp "Jacob Smilg"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L @CatFeeder:DS3231Breakout U1
+U 1 1 614A3892
+P 5850 2700
+F 0 "U1" H 5500 3050 50  0000 C CNN
+F 1 "DS3231 BREAKOUT" H 5850 2700 50  0000 C CNN
+F 2 "@CatFeeder:DS3231Breakout" H 5900 2200 50  0001 C CNN
+F 3 "http://datasheets.maximintegrated.com/en/ds/DS3231.pdf" H 6120 2750 50  0001 C CNN
+	1    5850 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 614AE296
+P 5850 3100
+F 0 "#PWR0105" H 5850 2850 50  0001 C CNN
+F 1 "GND" H 5855 2927 50  0000 C CNN
+F 2 "" H 5850 3100 50  0001 C CNN
+F 3 "" H 5850 3100 50  0001 C CNN
+	1    5850 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 614AE742
+P 5900 5200
+F 0 "#PWR0106" H 5900 4950 50  0001 C CNN
+F 1 "GND" H 5905 5027 50  0000 C CNN
+F 2 "" H 5900 5200 50  0001 C CNN
+F 3 "" H 5900 5200 50  0001 C CNN
+	1    5900 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0107
+U 1 1 614B03B4
+P 5850 3750
+F 0 "#PWR0107" H 5850 3600 50  0001 C CNN
+F 1 "+12V" H 5865 3923 50  0000 C CNN
+F 2 "" H 5850 3750 50  0001 C CNN
+F 3 "" H 5850 3750 50  0001 C CNN
+	1    5850 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 5150 5850 5200
+Wire Wire Line
+	5850 5200 5900 5200
+Text GLabel 5450 4450 0    50   Input ~ 0
+STEP
+Text GLabel 5450 4550 0    50   Input ~ 0
+DIR
+$Comp
+L power:+5V #PWR05
+U 1 1 614F6FB8
+P 5750 2300
+F 0 "#PWR05" H 5750 2150 50  0001 C CNN
+F 1 "+5V" H 5765 2473 50  0000 C CNN
+F 2 "" H 5750 2300 50  0001 C CNN
+F 3 "" H 5750 2300 50  0001 C CNN
+	1    5750 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR06
+U 1 1 614F77A7
+P 5300 4000
+F 0 "#PWR06" H 5300 3850 50  0001 C CNN
+F 1 "+5V" H 5315 4173 50  0000 C CNN
+F 2 "" H 5300 4000 50  0001 C CNN
+F 3 "" H 5300 4000 50  0001 C CNN
+	1    5300 4000
+	1    0    0    -1  
+$EndComp
+Text GLabel 5350 2500 0    50   BiDi ~ 0
+SCL
+Text GLabel 5350 2600 0    50   BiDi ~ 0
+SDA
+Wire Wire Line
+	5300 4050 5300 4000
+Wire Wire Line
+	5300 4050 5450 4050
+NoConn ~ 5450 3950
+NoConn ~ 5350 2900
+NoConn ~ 6350 2500
+NoConn ~ 5850 2300
+Wire Wire Line
+	5950 5150 5950 5200
+Wire Wire Line
+	5950 5200 5900 5200
+Connection ~ 5900 5200
+$Comp
+L Switch:SW_Push_Dual SW1
+U 1 1 615144A2
+P 8800 2750
+F 0 "SW1" H 8800 3035 50  0000 C CNN
+F 1 "UP" H 8800 2944 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 8800 2950 50  0001 C CNN
+F 3 "~" H 8800 2950 50  0001 C CNN
+	1    8800 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push_Dual SW2
+U 1 1 615153E9
+P 8800 3500
+F 0 "SW2" H 8800 3785 50  0000 C CNN
+F 1 "SELECT" H 8800 3694 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 8800 3700 50  0001 C CNN
+F 3 "~" H 8800 3700 50  0001 C CNN
+	1    8800 3500
+	1    0    0    -1  
+$EndComp
+Text GLabel 9100 2750 2    50   Output ~ 0
+UP
+Wire Wire Line
+	9000 2750 9100 2750
+Text GLabel 9100 3500 2    50   Output ~ 0
+SELECT
+Text GLabel 9100 4250 2    50   Output ~ 0
+DOWN
+Wire Wire Line
+	9000 3500 9100 3500
+Wire Wire Line
+	9000 4250 9100 4250
+$Comp
+L Switch:SW_Push_Dual SW3
+U 1 1 61515E4E
+P 8800 4250
+F 0 "SW3" H 8800 4535 50  0000 C CNN
+F 1 "DOWN" H 8800 4444 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm" H 8800 4450 50  0001 C CNN
+F 3 "~" H 8800 4450 50  0001 C CNN
+	1    8800 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 61556B1A
+P 8600 2950
+F 0 "#PWR07" H 8600 2700 50  0001 C CNN
+F 1 "GND" H 8605 2777 50  0000 C CNN
+F 2 "" H 8600 2950 50  0001 C CNN
+F 3 "" H 8600 2950 50  0001 C CNN
+	1    8600 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 6155C08E
+P 8600 3700
+F 0 "#PWR08" H 8600 3450 50  0001 C CNN
+F 1 "GND" H 8605 3527 50  0000 C CNN
+F 2 "" H 8600 3700 50  0001 C CNN
+F 3 "" H 8600 3700 50  0001 C CNN
+	1    8600 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 6155C37A
+P 8600 4450
+F 0 "#PWR09" H 8600 4200 50  0001 C CNN
+F 1 "GND" H 8605 4277 50  0000 C CNN
+F 2 "" H 8600 4450 50  0001 C CNN
+F 3 "" H 8600 4450 50  0001 C CNN
+	1    8600 4450
+	1    0    0    -1  
+$EndComp
+Text GLabel 2800 4650 0    50   Input ~ 0
+UP
+Text GLabel 2800 4550 0    50   Input ~ 0
+SELECT
+Text GLabel 2800 4450 0    50   Input ~ 0
+DOWN
+Text GLabel 2800 4050 0    50   Input ~ 0
+1HZ_INT
+Text GLabel 5450 4350 0    50   Input ~ 0
+STEPPER_EN
+$Comp
+L power:GND #PWR0104
+U 1 1 614ACF0D
+P 3350 5500
+F 0 "#PWR0104" H 3350 5250 50  0001 C CNN
+F 1 "GND" H 3355 5327 50  0000 C CNN
+F 2 "" H 3350 5500 50  0001 C CNN
+F 3 "" H 3350 5500 50  0001 C CNN
+	1    3350 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 5500 3350 5500
+Wire Wire Line
+	3350 5500 3400 5500
+Connection ~ 3350 5500
+NoConn ~ 2800 3950
+NoConn ~ 2800 3850
+NoConn ~ 3400 3450
+NoConn ~ 3800 3850
+NoConn ~ 3800 3950
+NoConn ~ 3800 4250
+NoConn ~ 3800 4550
+NoConn ~ 3800 4650
+NoConn ~ 3800 4750
+NoConn ~ 3800 5050
+NoConn ~ 3800 5150
+Text GLabel 3800 4850 2    50   BiDi ~ 0
+SDA
+Text GLabel 3800 4950 2    50   BiDi ~ 0
+SCL
+Text GLabel 2800 5050 0    50   Output ~ 0
+M0
+$Comp
+L power:GND #PWR04
+U 1 1 61505B41
+P 7400 6050
+F 0 "#PWR04" H 7400 5800 50  0001 C CNN
+F 1 "GND" H 7405 5877 50  0000 C CNN
+F 2 "" H 7400 6050 50  0001 C CNN
+F 3 "" H 7400 6050 50  0001 C CNN
+	1    7400 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 614F9281
+P 7400 5900
+F 0 "R2" H 7470 5946 50  0000 L CNN
+F 1 "100KΩ" H 7470 5855 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7330 5900 50  0001 C CNN
+F 3 "~" H 7400 5900 50  0001 C CNN
+	1    7400 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 614F68C5
+P 3500 3450
+F 0 "#PWR01" H 3500 3300 50  0001 C CNN
+F 1 "+5V" H 3515 3623 50  0000 C CNN
+F 2 "" H 3500 3450 50  0001 C CNN
+F 3 "" H 3500 3450 50  0001 C CNN
+	1    3500 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_Module:Arduino_Nano_v3.x U3
+U 1 1 614A3331
+P 3300 4450
+F 0 "U3" H 2950 5400 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" V 3300 4400 50  0000 C CNN
+F 2 "Module:Arduino_Nano_WithMountingHoles" H 3300 4450 50  0001 C CIN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 3300 4450 50  0001 C CNN
+	1    3300 4450
+	1    0    0    -1  
+$EndComp
+Text GLabel 2800 4250 0    50   Output ~ 0
+STEPPER_EN
+Text GLabel 2800 4150 0    50   Output ~ 0
+STEP
+Wire Wire Line
+	3400 5500 3400 5450
+Wire Wire Line
+	3300 5450 3300 5500
+Wire Wire Line
+	4200 1450 4100 1450
+Wire Wire Line
+	4200 1400 4200 1450
+$Comp
+L power:GND #PWR0102
+U 1 1 614A6725
+P 4200 1750
+F 0 "#PWR0102" H 4200 1500 50  0001 C CNN
+F 1 "GND" H 4205 1577 50  0000 C CNN
+F 2 "" H 4200 1750 50  0001 C CNN
+F 3 "" H 4200 1750 50  0001 C CNN
+	1    4200 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0101
+U 1 1 614A6137
+P 4200 1400
+F 0 "#PWR0101" H 4200 1250 50  0001 C CNN
+F 1 "+12V" H 4215 1573 50  0000 C CNN
+F 2 "" H 4200 1400 50  0001 C CNN
+F 3 "" H 4200 1400 50  0001 C CNN
+	1    4200 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Barrel_Jack J1
+U 1 1 614A4FEF
+P 3150 1550
+F 0 "J1" H 3207 1875 50  0000 C CNN
+F 1 "Barrel_Jack" H 3207 1784 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 3200 1510 50  0001 C CNN
+F 3 "https://www.cuidevices.com/product/resource/pj-002a.pdf" H 3200 1510 50  0001 C CNN
+F 4 "CP-002A-ND" H 3150 1550 50  0001 C CNN "Vendor"
+	1    3150 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J2
+U 1 1 6153AAFB
+P 6650 4450
+F 0 "J2" H 6730 4442 50  0000 L CNN
+F 1 "STEPPER" H 6730 4351 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 6650 4450 50  0001 C CNN
+F 3 "~" H 6650 4450 50  0001 C CNN
+	1    6650 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 5750 7500 5750
+$Comp
+L power:+5V #PWR03
+U 1 1 615454D0
+P 7500 5250
+F 0 "#PWR03" H 7500 5100 50  0001 C CNN
+F 1 "+5V" H 7515 5423 50  0000 C CNN
+F 2 "" H 7500 5250 50  0001 C CNN
+F 3 "" H 7500 5250 50  0001 C CNN
+	1    7500 5250
+	1    0    0    -1  
+$EndComp
+Text GLabel 7400 5350 0    50   Input ~ 0
+SENSOR_ACTIVE
+Text GLabel 7350 5650 0    50   Output ~ 0
+SENSOR
+Wire Wire Line
+	7500 5250 7500 5750
+Wire Wire Line
+	7350 5650 7400 5650
+Wire Wire Line
+	7600 5350 7400 5350
+Wire Wire Line
+	7400 5650 7400 5750
+Connection ~ 7400 5650
+Wire Wire Line
+	7400 5650 7600 5650
+$Comp
+L @CatFeeder:OP740WZ DOC1
+U 1 1 614B7DF2
+P 8800 5450
+F 0 "DOC1" H 8800 5650 50  0000 C CNN
+F 1 "OP740WZ" H 8800 5250 50  0000 C CNN
+F 2 "" H 8800 5250 50  0001 C CNN
+F 3 "" H 8800 5550 50  0001 C CNN
+	1    8800 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 5550 8500 5450
+Wire Wire Line
+	9100 5550 9100 5700
+Wire Wire Line
+	9100 5700 8450 5700
+Wire Wire Line
+	8450 5700 8450 5650
+Wire Wire Line
+	9100 5350 9200 5350
+Wire Wire Line
+	9200 5350 9200 5750
+Wire Wire Line
+	8250 5650 8450 5650
+Wire Wire Line
+	8250 5450 8500 5450
+Wire Wire Line
+	8250 5350 8500 5350
+NoConn ~ 8250 5350
+NoConn ~ 8250 5450
+NoConn ~ 8250 5650
+NoConn ~ 8250 5750
+$Comp
+L Connector_Generic:Conn_01x05 J3
+U 1 1 6154E55F
+P 7800 5550
+F 0 "J3" H 7880 5592 50  0000 L CNN
+F 1 "OP740WZ" H 7880 5501 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-05A_1x05_P2.54mm_Vertical" H 7800 5550 50  0001 C CNN
+F 3 "~" H 7800 5550 50  0001 C CNN
+F 4 "" H 7800 5550 50  0001 C CNN "Vendor"
+	1    7800 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 61539CC1
+P 6950 6050
+F 0 "#PWR02" H 6950 5800 50  0001 C CNN
+F 1 "GND" H 6955 5877 50  0000 C CNN
+F 2 "" H 6950 6050 50  0001 C CNN
+F 3 "" H 6950 6050 50  0001 C CNN
+	1    6950 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 614F87AC
+P 6950 5900
+F 0 "R1" H 6800 5950 50  0000 L CNN
+F 1 "100Ω" H 6700 5850 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6880 5900 50  0001 C CNN
+F 3 "https://www.nteinc.com/resistor_web/pdf/quarter_1percent.pdf" H 6950 5900 50  0001 C CNN
+F 4 "2368-QW110BR-ND" H 6950 5900 50  0001 C CNN "Vendor"
+	1    6950 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 5450 6950 5750
+Wire Wire Line
+	7600 5450 6950 5450
+NoConn ~ 7600 5550
+Wire Wire Line
+	8250 5750 9200 5750
+Text Notes 8300 5350 0    50   ~ 0
+ORNG
+Text Notes 8300 5450 0    50   ~ 0
+GRN
+Text Notes 8300 5650 0    50   ~ 0
+BLUE
+Text Notes 8300 5850 0    50   ~ 0
+WHITE
+$Comp
+L Device:C C1
+U 1 1 61561A28
+P 3650 1600
+F 0 "C1" H 3765 1646 50  0000 L CNN
+F 1 "0.1μF" H 3765 1555 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 3688 1450 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C315C104M5U5TA7303.pdf" H 3650 1600 50  0001 C CNN
+F 4 "399-9859-1-ND" H 3650 1600 50  0001 C CNN "Vendor"
+	1    3650 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 61561F48
+P 4100 1600
+F 0 "C2" H 4215 1646 50  0000 L CNN
+F 1 "100μF" H 4215 1555 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 4138 1450 50  0001 C CNN
+F 3 "https://surgecomponents.com/content/pdfs/capacitors/RXW.pdf" H 4100 1600 50  0001 C CNN
+F 4 "2616-RJA101M1VBK-0611S-ND" H 4100 1600 50  0001 C CNN "Vendor"
+	1    4100 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 1650 3550 1650
+Wire Wire Line
+	3550 1650 3550 1750
+Wire Wire Line
+	3550 1750 3650 1750
+Connection ~ 3650 1750
+Wire Wire Line
+	3650 1750 4100 1750
+Connection ~ 4100 1750
+Wire Wire Line
+	4100 1750 4200 1750
+Connection ~ 3650 1450
+Wire Wire Line
+	3650 1450 3450 1450
+Connection ~ 4100 1450
+Wire Wire Line
+	4100 1450 3650 1450
+$Comp
+L @CatFeeder:I2COLEDDisplay OLED1
+U 1 1 615C92E1
+P 7300 2400
+F 0 "OLED1" H 7100 2500 50  0000 L CNN
+F 1 "I2COLEDDisplay" H 7000 2600 50  0000 L CNN
+F 2 "@CatFeeder:i2cOLED" H 7200 2400 50  0001 C CNN
+F 3 "" H 7200 2400 50  0001 C CNN
+	1    7300 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L @CatFeeder:BuckConverter U2
+U 1 1 615C9924
+P 3300 2350
+F 0 "U2" H 3550 2600 50  0000 C CNN
+F 1 "BuckConverter" H 3300 2750 50  0000 C CNN
+F 2 "@CatFeeder:BuckConverterBreakout" H 3300 2350 50  0001 C CNN
+F 3 "" H 3300 2350 50  0001 C CNN
+	1    3300 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR010
+U 1 1 615CFFD6
+P 2800 2200
+F 0 "#PWR010" H 2800 2050 50  0001 C CNN
+F 1 "+12V" H 2815 2373 50  0000 C CNN
+F 2 "" H 2800 2200 50  0001 C CNN
+F 3 "" H 2800 2200 50  0001 C CNN
+	1    2800 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 615D0543
+P 3300 2800
+F 0 "#PWR011" H 3300 2550 50  0001 C CNN
+F 1 "GND" H 3305 2627 50  0000 C CNN
+F 2 "" H 3300 2800 50  0001 C CNN
+F 3 "" H 3300 2800 50  0001 C CNN
+	1    3300 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 2200 2800 2350
+Wire Wire Line
+	2800 2350 2900 2350
+$Comp
+L power:+5V #PWR013
+U 1 1 615D09FE
+P 3950 2300
+F 0 "#PWR013" H 3950 2150 50  0001 C CNN
+F 1 "+5V" H 3965 2473 50  0000 C CNN
+F 2 "" H 3950 2300 50  0001 C CNN
+F 3 "" H 3950 2300 50  0001 C CNN
+	1    3950 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 615DB5BE
+P 3800 2500
+F 0 "C3" H 3915 2546 50  0000 L CNN
+F 1 "0.1μF" H 3915 2455 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm" H 3838 2350 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/specsheet/C315C104M5U5TA7303.pdf" H 3800 2500 50  0001 C CNN
+F 4 "399-9859-1-ND" H 3800 2500 50  0001 C CNN "Vendor"
+	1    3800 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR015
+U 1 1 615E2891
+P 6900 2750
+F 0 "#PWR015" H 6900 2600 50  0001 C CNN
+F 1 "+5V" H 6915 2923 50  0000 C CNN
+F 2 "" H 6900 2750 50  0001 C CNN
+F 3 "" H 6900 2750 50  0001 C CNN
+	1    6900 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR016
+U 1 1 615E2F93
+P 7150 2650
+F 0 "#PWR016" H 7150 2400 50  0001 C CNN
+F 1 "GND" H 7155 2477 50  0000 C CNN
+F 2 "" H 7150 2650 50  0001 C CNN
+F 3 "" H 7150 2650 50  0001 C CNN
+	1    7150 2650
+	1    0    0    -1  
+$EndComp
+Text GLabel 7350 2650 3    50   BiDi ~ 0
+SCL
+Text GLabel 7450 2650 3    50   BiDi ~ 0
+SDA
+Wire Wire Line
+	6900 2750 6900 3000
+Wire Wire Line
+	6900 3000 7250 3000
+Wire Wire Line
+	7250 3000 7250 2650
+Text GLabel 2800 4750 0    50   Input ~ 0
+DIR
+Text GLabel 2800 4850 0    50   Output ~ 0
+M2
+Text GLabel 2800 4950 0    50   Output ~ 0
+M1
+Text GLabel 5450 4750 0    50   Output ~ 0
+M0
+$Comp
+L Driver_Motor:Pololu_Breakout_DRV8825 U4
+U 1 1 614AB577
+P 5850 4350
+F 0 "U4" H 5600 4900 50  0000 C CNN
+F 1 "DRV8825" V 5850 4250 50  0000 C CNN
+F 2 "@CatFeeder:DRV8825Breakout" H 6050 3550 50  0001 L CNN
+F 3 "https://www.pololu.com/product/2982" H 5950 4050 50  0001 C CNN
+	1    5850 4350
+	1    0    0    -1  
+$EndComp
+Text GLabel 5450 4850 0    50   Output ~ 0
+M1
+Text GLabel 5450 4950 0    50   Output ~ 0
+M2
+Wire Wire Line
+	3300 2650 3300 2800
+NoConn ~ 3300 2050
+Wire Wire Line
+	3300 2650 3800 2650
+Connection ~ 3300 2650
+Wire Wire Line
+	3800 2350 3700 2350
+Connection ~ 3800 2350
+Wire Wire Line
+	3950 2350 3950 2300
+Wire Wire Line
+	3800 2350 3950 2350
+Wire Wire Line
+	6250 4550 6450 4550
+Wire Wire Line
+	6450 4650 6250 4650
+Wire Wire Line
+	6250 4350 6450 4350
+Wire Wire Line
+	6250 4250 6400 4250
+Wire Wire Line
+	6400 4250 6400 4450
+Wire Wire Line
+	6400 4450 6450 4450
+Text GLabel 6350 2800 2    50   Output ~ 0
+1HZ_INT
+Text GLabel 3800 4450 2    50   Input ~ 0
+SENSOR
+Text GLabel 2800 5150 0    50   Output ~ 0
+SENSOR_ACTIVE
+NoConn ~ 2800 4350
+Wire Wire Line
+	5300 4050 5300 4150
+Wire Wire Line
+	5300 4150 5450 4150
+Connection ~ 5300 4050
+NoConn ~ 3200 3450
+Connection ~ 8600 4450
+Wire Wire Line
+	8600 4250 8600 4450
+Connection ~ 9000 4250
+Wire Wire Line
+	9000 4250 9000 4450
+Connection ~ 8600 3700
+Wire Wire Line
+	8600 3500 8600 3700
+Connection ~ 9000 3500
+Wire Wire Line
+	9000 3500 9000 3700
+Connection ~ 8600 2950
+Wire Wire Line
+	8600 2750 8600 2950
+Connection ~ 9000 2750
+Wire Wire Line
+	9000 2750 9000 2950
+$EndSCHEMATC
